@@ -20,10 +20,16 @@ public class Game {
      * Records the number of pins knocked down in a roll.
      *
      * @param pins The number of pins knocked down in the roll.
+     *             Must be between 0 and 10.
+     *             If the number of pins is invalid, an IllegalArgumentException is thrown.
      */
     public void roll(int pins) {
+        if (pins < 0 || pins > 10) {
+            throw new IllegalArgumentException("Number of pins knocked down must be between 0 and 10.");
+        }
         rolls.add(pins);
     }
+
 
     /**
      * Calculates and returns the total score of the game.
