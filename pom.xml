@@ -20,6 +20,12 @@
             <version>5.7.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.32</version> <!-- Replace with the appropriate version -->
+        </dependency>
+
     </dependencies>
 
     <properties>
