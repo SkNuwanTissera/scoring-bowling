@@ -2,6 +2,7 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class GameTest {
 
@@ -46,5 +47,25 @@ class GameTest {
             game.roll(pins);
         }
         assertEquals(167, game.score());
+    }
+
+    // Negative test cases
+    @Test
+    void testInvalidNumberOfPins() {
+        Game game = new Game();
+        assertThrows(IllegalArgumentException.class, () -> game.roll(-1));
+    }
+
+//    @Test
+//    void testExceedingPinsInFrame() {
+//        Game game = new Game();
+//        game.roll(5);
+//        assertThrows(IllegalArgumentException.class, () -> game.roll(6));
+//    }
+
+    @Test
+    void testInvalidSequenceOfRolls() {
+        int[] rolls = {3, 5, 10, 4, 6, 7, 2, 3, 10, 8, 1, 10, 10, 10, 9};
+        assertThrows(IllegalArgumentException.class, () -> GameUtils.validateRoll(rolls));
     }
 }

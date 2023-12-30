@@ -3,13 +3,7 @@ package org.example;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.example.GameUtils.frameScore;
-import static org.example.GameUtils.isSpare;
-import static org.example.GameUtils.isStrike;
-import static org.example.GameUtils.spareBonus;
-import static org.example.GameUtils.strikeBonus;
-import static org.example.GameUtils.validateFrame;
-import static org.example.GameUtils.validatePins;
+import static org.example.GameUtils.*;
 
 /**
  * Represents a game of bowling.
