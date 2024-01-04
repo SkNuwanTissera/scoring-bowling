@@ -34,15 +34,7 @@ class GameUtils {
                 // Current roll, after a non-strike in the last frame, exceeds 10 pins
                 return true;
             }
-        } else {
-            // Odd-sized means we're in the middle of a frame
-            int frameScore = rolls.get(size - 2) + rolls.get(size - 1);
-            if (frameScore > 10) {
-                // Sum of current and previous rolls exceeds 10 in a frame
-                return true;
-            }
         }
-
         return false;
     }
 
